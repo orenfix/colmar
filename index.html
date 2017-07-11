@@ -10,27 +10,27 @@
     <header>
 	    <div class='logo'>
 	    	<a href='#'><img src='assets/images/ic-logo.svg'/>
-	    	<p class='desktop'><b>COLMAR</b>ACADEMY</p></a>
+	    	<p><b>COLMAR</b>ACADEMY</p></a>
 	    </div>   <!--logo-->
 	    <nav>
-	    	<ul class='desktop'>
-	    		<li><a href='#'>On campus</a></li>
-	    		<li><a href='#'>Online</a></li>
-	    		<li><a href='#'>For companies</a></li>
-	    		<li><a href='#'>Sign in</a></li>
-	    	</ul>
-	    	<ul class='mobile'>
-	    		<li><a href='#'><img src='assets/images/ic-on-campus.svg'/></a></li>
-	    		<li><a href='#'><img src='assets/images/ic-online.svg'/></a></li>
-	    		<li><a href='#'><img src='assets/images/ic-login.svg'/></a></li>
+	    	<ul>
+	    		<li><a href='#'><p>On campus</p>
+	    			<img src='assets/images/ic-on-campus.svg'/></a></li>
+	    		<li><a href='#'><p>Online</p>
+	    			<img src='assets/images/ic-online.svg'/></a></li>
+	    		<li class='desktop'><a href='#'><p>For companies</p></a></li>
+	    		<li><a href='#'><p>Sign in</p>
+	    			<img src='assets/images/ic-login.svg'/></a></li>
 	    	</ul>
 	    </nav>
     </header>
 
 
     <main>
-	    <div class='banner'>
-		    <img src='assets/images/banner.jpg'/>
+    	<div class='banner'>
+		    <div class='image-container'>
+		    	<img src='assets/images/banner.jpg'/>
+		    </div>   <!--image-container-->
 		    <div class='content'>
 		    	<h1>Learn something new everyday</h1>
 		    	<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
@@ -38,7 +38,7 @@
 			    	<p>Start here</p>
 			    </div>   <!--button-->
 		    </div>   <!--content-->
-	    </div>   <!--banner-->
+		</div>.  <!--banner-->
 
 
 	    <div class='information-container'>
@@ -48,8 +48,8 @@
 			    <p>"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Se non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</p>
 			    <p class='citation'>Emanuel, Sr Strategist at Hiring.com</p>
 			 </div>   <!--desktop (information)-->
-			 <div class='information'>
-		    	<div class='orientation'>
+			 <div>
+		    	<div class='information'>
 		    		<img class='desktop' src='assets/images/information-orientation.jpg'/>
 		    		<img class='mobile' src='assets/images/information-orientation-mobile.jpg'/>
 		    		<div class='content'>
@@ -57,8 +57,8 @@
 		    			<p>Tue 10/11 &amp; Wed 10/12: 8am-3pm</p>
 		    			<a href='#'>Read more</a>
 		    		</div>   <!--content-->
-		    	</div>   <!--orientation-->
-		    	<div class='campus'>
+		    	</div>   <!--information-->
+		    	<div class='information'>
 		    		<img class='desktop' src='assets/images/information-campus.jpg'/>
 		    		<img class='mobile' src='assets/images/information-campus-mobile.jpg'/>
 		    		<div class='content'>
@@ -66,17 +66,17 @@
 		    			<p>Find which campus is close to you</p>
 		    			<a href='#'>Read more</a>
 		    		</div>   <!--content-->
-		    	</div>   <!--campus-->
-		    	<div class='guest-lecture'>
+		    	</div>   <!--information-->
+		    	<div class='information'>
 		    		<img class='desktop' src='assets/images/information-guest-lecture.jpg'/>
 		    		<img class='mobile' src='assets/images/information-guest-lecture-mobile.jpg'/>
 		    		<div class='content'>
-		    		</div>   <!--content-->
 		    			<h3>Our guest lecture</h3>
 		    			<p>Join a keynote with Oliver Sack about music in medical treatment</p>
 		    			<a href='#'>Read more</a>
-		    	</div>   <!--guest-lecture-->
-	    	</div>   <!--information-->
+		    		</div>   <!--content-->
+		    	</div>   <!--information-->
+	    	</div>
 	    </div>   <!--information-container-->
 
 
@@ -146,30 +146,34 @@
 
 	    <div class='thesis-container'>
 	   		<h2>Thesis exhibit</h2>
-	   		<div class='content'>
+	   		<div class='thesis-content'>
 		    	<div class='video-container'>
 		    		<video autoplay loop>
 		    		<source src='assets/videos/thesis.mp4' type='video/mp4'>
 		    		Video is unsupported in your browser
 		    		</video>
-		    		<div class=' desktop content'>
+		    		<div class='video-caption'>
 		    			<h3>Reimagine urban</h3>
 		    			<p>"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Se non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</p>
-		    		</div>   <!--content-->
+		    		</div>   <!--video-caption-->
 		    	</div>   <!--video-container-->
-		    	<div class='desktop exhibits'>
+		    	<div class='exhibits'>
 			    	<div class='thesis'>
 			    		<img src='assets/images/thesis-fisma.jpg'/>
-		    			<h3>Fisma: Design and information security</h3>
-		    			<p>Designer showcase of new prototype product</p>
+			    		<div class='thesis-caption'>
+			    			<h3>Fisma: Design and information security</h3>
+			    			<p>Designer showcase of new prototype product</p>
+			    		</div>   <!--thesis-caption-->
 			    	</div>   <!--thesis-->
 			    	<div class='thesis'>
 			    		<img src='assets/images/thesis-now-and-then.jpg'/>
-		    			<h3>Now and then</h3>
-		    			<p>Research study about New York</p>
+			    		<div class='thesis-caption'>
+			    			<h3>Now and then</h3>
+			    			<p>Research study about New York</p>
+			    		</div>   <!--thesis-caption-->	
 			    	</div>   <!--thesis-->
 			    </div>   <!--exhibits-->
-			</div>   <!--content-->
+			</div>   <!--thesis-content-->
 	    </div>   <!--thesis-container-->
     </main>
 
@@ -178,7 +182,7 @@
     	<div class='copyright'>
     		<p>&copy; 2017 Colmar Academy. All rights reserved</p>
     	</div>   <!--copyright-->
-    	<div class='desktop legal'>
+    	<div class='legal'>
     		<a href='#'>Terms</a>
     		<a href='#'>Privacy</a>
     	</div>   <!--legal-->

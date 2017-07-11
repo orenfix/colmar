@@ -1,18 +1,147 @@
-.desktop {
-	display: block;
+/***** UNIVERSAL STYLES *****/
+
+html {
+
+}
+body {
+
+}
+b {
+	font-weight: bold;
+}
+a {
+	text-decoration: none;
+	display: inline-block;
 }
 
-.mobile {
+
+/***** HEADER *****/
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+header img {
+	display: none;
+}
+.logo img {
+	display: inline-block;
+}
+header p, header li {
+	display: inline;
+}
+
+@media only screen and (max-width: 900px) {
+	header img {
+		display: inline;
+	}
+	.logo {
+		width: 25%;
+		text-align: center;
+	}
+	nav {
+		width: 75%;
+	}
+	header p, header .desktop {
+		display: none;
+	}
+	header ul {
+		display: flex;
+		justify-content: space-around;
+	}
+}
+
+
+/***** BANNER *****/
+
+.banner {
+	display: flex;
+}
+
+@media only screen and (max-width: 900px) {
+	.banner {
+		flex-direction: column;
+	}
+}
+
+
+/***** INFORMATION *****/
+
+.information-container, .information {
+	display: flex;
+}
+.information-container .mobile {
 	display: none;
 }
 
-
 @media only screen and (max-width: 900px) {
-	.desktop {
+	.information-container .desktop {
 		display: none;
 	}
-
-	.mobile {
+	.information {
+		flex-direction: column;
+	}
+	.information .mobile {
 		display: block;
+	}
+}
+
+
+/***** COURSES *****/
+
+.courses-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.desktop.courses {
+	display: flex;
+	flex-wrap: wrap;
+}
+.mobile.courses {
+	display: none;
+}
+
+@media only screen and (max-width: 900px) {
+	.desktop.courses {
+		display: none;
+	}
+	.mobile.courses {
+		display: block;
+	}
+}
+
+
+/***** THESIS *****/
+
+.thesis-container, .thesis-content, .thesis {
+	display: flex;
+}
+.thesis-container {
+	flex-direction: column;
+	align-items: center;
+}
+video {
+	width: 600px;
+}
+
+@media only screen and (max-width: 900px) {
+	.video-caption, .exhibits {
+		display: none;
+	}
+}
+
+
+/***** FOOTER *****/
+
+footer {
+	display: flex;
+	justify-content: space-between;
+}
+
+@media only screen and (max-width: 900px) {
+	.legal {
+		display: none;
 	}
 }
