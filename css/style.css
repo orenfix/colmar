@@ -26,16 +26,17 @@ header {
 	padding-left: 1.5rem;
 	height: 4rem;
 }
-header a {
-	display: block;
+.logo {
+	display: flex;
+	justify-content: center;
 }
 .logo img {
 	display: block;
 }
 .logo a {
 	display: flex;
-	justify-content: center;
 	align-items: center;
+	width: 27px;
 }
 header li {
 	display: inline-block;
