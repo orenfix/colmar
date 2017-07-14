@@ -1,7 +1,9 @@
 /***** UNIVERSAL STYLES *****/
 
 html {
-
+	font-size: 16px;
+	font-family: Helvetica, sans-serif;
+	color: rgb(104,104,104);
 }
 body {
 
@@ -11,7 +13,7 @@ b {
 }
 a {
 	text-decoration: none;
-	display: inline-block;
+	color: rgb(70,70,70);
 }
 
 
@@ -21,27 +23,41 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	padding-left: 1.5rem;
+	height: 4rem;
 }
-header img {
-	display: none;
+header a {
+	display: block;
 }
 .logo img {
-	display: inline-block;
+	display: block;
 }
-header p, header li {
-	display: inline;
+.logo a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header li {
+	display: inline-block;
+	margin-right: 1rem;
+}
+nav img {
+	display: none;
 }
 
 @media only screen and (max-width: 900px) {
-	header img {
-		display: inline;
+	header {
+		padding: 0;
 	}
 	.logo {
 		width: 25%;
-		text-align: center;
 	}
 	nav {
 		width: 75%;
+	}
+	nav img {
+		display: block;
+		height: 27px;
 	}
 	header p, header .desktop {
 		display: none;
@@ -57,11 +73,57 @@ header p, header li {
 
 .banner {
 	display: flex;
+	background-color: rgb(220,220,220);
+}
+.banner .image-container {
+	width: 60%;
+	padding: 2rem 0 2rem 1.5rem;
+}
+.banner img {
+	width: 100%;
+}
+.banner .content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 2.5rem;
+}
+h1 {
+	font-size: 2.5rem;
+	font-weight: bold;
+	margin-top: 2rem;
+}
+h2 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	padding: 2rem 0;
+}
+button {
+	width: 24rem;
+	max-width: 100%;
+    font-size: 1rem;
+    color: white;
+    background-color: rgb(104,104,104);
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    border: 0;
 }
 
 @media only screen and (max-width: 900px) {
 	.banner {
 		flex-direction: column;
+	}
+	.banner .image-container {
+		width: 100%;
+		overflow: hidden;
+		height: 11.25rem;
+		padding: 0;
+	}
+	.banner .content {
+		padding: 0 1rem;
+	}
+	h2 {
+		padding: 2rem 0 1.5rem 0;
 	}
 }
 
