@@ -13,7 +13,29 @@ b {
 }
 a {
 	text-decoration: none;
-	color: rgb(70,70,70);
+	display: inline-block;
+}
+main {
+	border: 1px solid  rgb(220,220,220);
+}
+.left {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	padding: 2rem 1.5rem;
+}
+.right {
+	display: flex;
+	flex-direction: column;
+	width: 423px;
+}
+
+
+@media only screen and (max-width: 900px) {
+	.left, .right {
+		width: 100%;
+		padding: 0;
+	}
 }
 
 
@@ -41,6 +63,9 @@ header {
 header li {
 	display: inline-block;
 	margin-right: 1rem;
+}
+nav a {
+	color: rgb(70,70,70);
 }
 nav img {
 	display: none;
@@ -74,81 +99,125 @@ nav img {
 
 .banner {
 	display: flex;
-	background-color: rgb(220,220,220);
 }
-.banner .image-container {
-	width: 60%;
-	padding: 2rem 0 2rem 1.5rem;
+.banner .left {
+	background-color: rgb(220,220,220);
 }
 .banner img {
 	width: 100%;
 }
-.banner .content {
-	display: flex;
-	flex-direction: column;
+.banner .right {
 	justify-content: center;
-	padding: 0 2.5rem;
+	background-color: rgb(220,220,220);
+}
+.banner .content {
+	margin: 2rem 1rem;
 }
 h1 {
 	font-size: 2.5rem;
 	font-weight: bold;
-	margin-top: 2rem;
 }
-h2 {
+h3 {
 	font-size: 1.5rem;
 	font-weight: bold;
-	padding: 2rem 0;
+	margin: 2rem 0 0.5rem 0;
 }
 button {
-	width: 24rem;
+	width: 20rem;
 	max-width: 100%;
     font-size: 1rem;
     color: white;
     background-color: rgb(104,104,104);
     padding: 0.5rem;
-    margin-bottom: 2rem;
+    margin-top: 1.5rem;
     border: 0;
 }
 
 @media only screen and (max-width: 900px) {
 	.banner {
 		flex-direction: column;
-	}
-	.banner .image-container {
-		width: 100%;
-		overflow: hidden;
-		height: 11.25rem;
 		padding: 0;
 	}
-	.banner .content {
-		padding: 0 1rem;
-	}
-	h2 {
-		padding: 2rem 0 1.5rem 0;
+	.banner .left {
+		overflow: hidden;
+		height: 11.25rem;
 	}
 }
 
 
 /***** INFORMATION *****/
 
-.information-container, .information {
+.information-container {
 	display: flex;
 }
-.information-container .mobile {
+.information-container .right {
+	border-left: 1px solid rgb(220,220,220);
+}
+.information-container img {
+	width: 100%;
+}
+.information-container h2 {
+	font-size: 2rem;
+	font-weight: bold;
+	padding: 2rem 0 1.5rem 0;
+}
+.citation {
+	padding-top: 2rem;
+}
+.information {
+	display: flex;
+	padding: 1rem 0 1rem 1rem;
+}
+.information .mobile {
 	display: none;
 }
+.information img  {
+	width: 35%;
+	height: 100%;
+}
+.information:first-child {
+	padding-top: 0;
+}
+.information:first-child {
+	margin-top: 2rem;
+}
+.information:last-child {
+	background-color: rgb(220,220,220);
+}
+.info-description {
+	padding-left: 1rem;
+}
+.information a {
+	font-weight: bold;
+	color: blue;
+	margin: 1rem 0;
+}
+
 
 @media only screen and (max-width: 900px) {
-	.information-container .desktop {
+	.information-container .left, .information .desktop {
 		display: none;
-	}
-	.information {
-		flex-direction: column;
 	}
 	.information .mobile {
 		display: block;
 	}
-}
+	.information-container .right {
+		padding: 1rem;
+		border: 0;
+	}
+	.information {
+		flex-direction: column;
+		padding: 0;
+	}
+	.information:first-child {
+		margin: 0;
+	}
+	.information:last-child {
+	background-color: white;
+	}
+	.information img {
+		width: 100%;
+	}
 
 
 /***** COURSES *****/
