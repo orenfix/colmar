@@ -149,6 +149,7 @@ button {
 
 .information-container {
 	display: flex;
+
 }
 .information-container h2 {
 	text-align: left;
@@ -218,12 +219,31 @@ button {
 
 /***** COURSES *****/
 
+.courses-container {
+    background-color: rgb(220,220,220);
+}
 .desktop.courses {
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: column;
+	padding-bottom: 1rem;
+}
+.desktop.courses .row {
+	display: flex;
+	justify-content: center;
 }
 .mobile.courses {
 	display: none;
+}
+.course {
+	background-color: white;
+	width: 20rem;
+	margin: 0 1rem 1rem 1rem;
+}
+.course img {
+	width: 100%;
+}
+.course-description {
+	padding: 1rem 1rem 1.5rem 1rem;
 }
 
 @media only screen and (max-width: 900px) {
@@ -233,13 +253,24 @@ button {
 	.mobile.courses {
 		display: block;
 	}
+	.courses-container {
+    	background-color: white;
+	}
+	.mobile.courses h3 {
+		background-color: rgb(220,220,220);
+		padding: 1rem;
+		margin: 0.5rem;
+	}
 }
 
 
 /***** THESIS *****/
 
-.thesis-container {
+.thesis-container, .thesis {
 	display: flex;
+}
+.thesis-container {
+	flex-direction: column;
 }
 .thesis-container .left {
 	padding-right: 0;
