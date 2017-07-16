@@ -5,15 +5,27 @@ html {
 	font-family: Helvetica, sans-serif;
 	color: rgb(104,104,104);
 }
-body {
-
-}
 b {
 	font-weight: bold;
 }
 a {
 	text-decoration: none;
-	display: inline-block;
+	color: rgb(70,70,70);
+}
+h1 {
+	font-size: 2.5rem;
+	font-weight: bold;
+}
+h2 {
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: center;
+	padding: 2rem 0 1.5rem 0;
+}
+h3 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin: 2rem 0 0.5rem 0;
 }
 main {
 	border: 1px solid  rgb(220,220,220);
@@ -58,14 +70,10 @@ header {
 .logo a {
 	display: flex;
 	align-items: center;
-	width: 27px;
 }
 header li {
 	display: inline-block;
 	margin-right: 1rem;
-}
-nav a {
-	color: rgb(70,70,70);
 }
 nav img {
 	display: none;
@@ -84,6 +92,7 @@ nav img {
 	nav img {
 		display: block;
 		height: 27px;
+
 	}
 	header p, header .desktop {
 		display: none;
@@ -113,15 +122,6 @@ nav img {
 .banner .content {
 	margin: 2rem 1rem;
 }
-h1 {
-	font-size: 2.5rem;
-	font-weight: bold;
-}
-h3 {
-	font-size: 1.5rem;
-	font-weight: bold;
-	margin: 2rem 0 0.5rem 0;
-}
 button {
 	width: 20rem;
 	max-width: 100%;
@@ -150,16 +150,14 @@ button {
 .information-container {
 	display: flex;
 }
+.information-container h2 {
+	text-align: left;
+}
 .information-container .right {
 	border-left: 1px solid rgb(220,220,220);
 }
 .information-container img {
 	width: 100%;
-}
-.information-container h2 {
-	font-size: 2rem;
-	font-weight: bold;
-	padding: 2rem 0 1.5rem 0;
 }
 .citation {
 	padding-top: 2rem;
@@ -177,8 +175,6 @@ button {
 }
 .information:first-child {
 	padding-top: 0;
-}
-.information:first-child {
 	margin-top: 2rem;
 }
 .information:last-child {
@@ -218,15 +214,10 @@ button {
 	.information img {
 		width: 100%;
 	}
-
+}
 
 /***** COURSES *****/
 
-.courses-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
 .desktop.courses {
 	display: flex;
 	flex-wrap: wrap;
@@ -247,19 +238,39 @@ button {
 
 /***** THESIS *****/
 
-.thesis-container, .thesis-content, .thesis {
+.thesis-container {
 	display: flex;
 }
-.thesis-container {
-	flex-direction: column;
-	align-items: center;
+.thesis-container .left {
+	padding-right: 0;
+}
+.video-container {
+	margin-bottom: 1.5rem;
 }
 video {
-	width: 600px;
+	width: 100%;
+}
+.thesis-container .right {
+	margin-top: 2rem;
+	margin-left: 1rem;
+}
+.exhibit {
+    display: flex;
+    height: 8.5rem;
+    padding: 1rem;
+}
+.exhibit:first-child {
+    background-color: rgb(220,220,220);
+}
+.exhibit img {
+	height: 100%;
+}
+.exhibit-description {
+	padding-left: 1rem;
 }
 
 @media only screen and (max-width: 900px) {
-	.video-caption, .exhibits {
+	.video-caption, .thesis-container .right {
 		display: none;
 	}
 }
@@ -270,6 +281,10 @@ video {
 footer {
 	display: flex;
 	justify-content: space-between;
+	margin: 1rem 0 1rem 1.5rem;
+}
+footer a {
+	margin-right: 1rem;
 }
 
 @media only screen and (max-width: 900px) {
