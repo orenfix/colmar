@@ -18,7 +18,7 @@ a {
 	text-decoration: none;
 	color: rgb(90,90,90);
 }
-a:hover {
+a:hover, a:active {
 	color: rgb(80,185,253);
 }
 h1 {
@@ -85,7 +85,7 @@ header {
 	display: flex;
 	align-items: center;
 }
-.logo a:hover {
+.logo a:hover, .logo a:active {
 	color: rgb(90,90,90);
 }
 .logo p {
@@ -157,7 +157,7 @@ button {
     cursor: pointer;
     transition: background-color 300ms;
 }
-button:hover {
+button:hover, button:active {
 	background-color: rgb(80,185,253)
 }
 
@@ -227,7 +227,7 @@ button:hover {
 	color: rgb(80,185,253);
 	margin-top: 0.5rem;
 }
-.information a:hover {
+.information a:hover, .information a:active {
 	font-weight: 500;
 }
 
@@ -335,7 +335,7 @@ h4 {
 		transition: color 100ms;
 		transition: background-color 300ms;
 	}
-	.mobile.courses h3:hover {
+	.mobile.courses h3:hover, .mobile.courses h3:active {
 		color: white;
 		background-color: rgb(80,185,253);
 	}
