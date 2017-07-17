@@ -1,25 +1,21 @@
-/***** UNIVERSAL STYLES *****/
+
+
+/***** universal styles *****/
 
 @import url('https://fonts.googleapis.com/css?family=Ek+Mukta:300,500,700,800');
 
 html {
-	font-size: 16px;
 	font-family: 'Ek Mukta', Helvetica, sans-serif;
+	font-size: 16px;
 	color: rgb(90,90,90);
 }
-.logo, .logo a:hover {
-	font-weight: 500;
-	font-size: 1.5rem;
-	color: rgb(90,90,90);
-}
-.logo span {
-	font-weight: 300;
-	color: rgb(200,200,200);
+main {
+	border: 1px solid  rgb(220,220,220);
 }
 a {
+	display: inline-block;
 	text-decoration: none;
 	color: rgb(90,90,90);
-	cursor: pointer;
 }
 a:hover {
 	color: rgb(80,185,253);
@@ -27,23 +23,24 @@ a:hover {
 h1 {
 	font-size: 2.5rem;
 	font-weight: 800;
+	margin-bottom: 2rem;
 }
 h2 {
 	font-size: 2rem;
 	font-weight: 800;
 	text-align: center;
-	padding: 2rem 0 1.5rem 0;
+	margin-bottom: 2rem;
 }
 h3 {
 	font-size: 1.5rem;
 	font-weight: 700;
-	margin: 2rem 0 0.5rem 0;
+	margin-bottom: 0.5rem;
 }
-p {
+h4, p {
 	font-weight: 300;
 }
-main {
-	border: 1px solid  rgb(220,220,220);
+img {
+	width: 100%;
 }
 .left {
 	display: flex;
@@ -55,10 +52,10 @@ main {
 	display: flex;
 	flex-direction: column;
 	width: 423px;
+	flex-shrink: 0;
 }
 
-
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 480px) {
 	.left, .right {
 		width: 100%;
 		padding: 0;
@@ -66,7 +63,7 @@ main {
 }
 
 
-/***** HEADER *****/
+/***** header *****/
 
 header {
 	display: flex;
@@ -87,6 +84,17 @@ header {
 	display: flex;
 	align-items: center;
 }
+.logo a:hover {
+	color: rgb(90,90,90);
+}
+.logo p {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+.logo span {
+	font-weight: 300;
+	color: rgb(200,200,200);
+}
 header li {
 	display: inline-block;
 	margin-right: 1rem;
@@ -95,7 +103,7 @@ nav img {
 	display: none;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 768px) {
 	header {
 		padding: 0;
 	}
@@ -122,24 +130,23 @@ nav img {
 }
 
 
-/***** BANNER *****/
+/***** banner *****/
 
 .banner {
 	display: flex;
+	align-items: center;
 	background-color: rgb(240,240,240);
-}
-.banner img {
-	width: 100%;
-}
-.banner .right {
-	justify-content: center;
+	border-bottom: 1px solid  rgb(220,220,220);
 }
 .banner .content {
 	margin: 2rem 1rem;
 }
+.banner p {
+	font-size: 1.5rem;
+	font-weight: 500;
+}
 button {
 	width: 20rem;
-	max-width: 100%;
     font-size: 1rem;
     color: white;
     background-color: rgb(90,90,90);
@@ -153,42 +160,49 @@ button:hover {
 	background-color: rgb(80,185,253)
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 768px) {
 	.banner {
 		flex-direction: column;
 		padding: 0;
 	}
 	.banner .left {
 		overflow: hidden;
+		width: 100%;
 		height: 11.25rem;
 	}
 }
 
+@media only screen and (max-width: 480px) {
+	button {
+		padding: 1rem;
+		width: 100%;
+	}
+}
 
-/***** INFORMATION *****/
+
+/***** information *****/
 
 .information-container {
 	display: flex;
-
+	border-bottom: 1px solid  rgb(220,220,220);
 }
 .information-container h2 {
 	text-align: left;
+	margin: 2rem 0 1.5rem 0;
 }
 .information-container .right {
 	border-left: 1px solid rgb(240,240,240);
 }
-.information-container img {
-	width: 100%;
-}
 .citation {
+	font-size: .9rem;
 	padding-top: 2rem;
-}
-.information {
-	display: flex;
-	padding: 1rem 0 1rem 1rem;
 }
 .information .mobile {
 	display: none;
+}
+.information {
+	display: flex;
+	padding: 1rem;
 }
 .information img  {
 	width: 35%;
@@ -201,28 +215,43 @@ button:hover {
 .information:last-child {
 	background-color: rgb(240,240,240);
 }
-.info-description {
-	padding-left: 1rem;
+.information .description {
+	padding: 1rem;
 }
 .information a {
 	color: rgb(80,185,253);
-	margin: 1rem 0;
+	margin-top: 0.5rem;
 }
 .information a:hover {
 	font-weight: 700;
 }
 
+@media only screen and (max-width: 768px) {
+	.information-container .left {
+		display: none;
+	}
+	.information-container .right {
+		width: 100%;
+		border: 0;
+	}
+	.information:first-child {
+		margin-top: 1rem;
+	}
+	.information img {
+		width: 130px;
+	}
+}
 
-@media only screen and (max-width: 900px) {
-	.information-container .left, .information .desktop {
+@media only screen and (max-width: 480px) {
+	.information .desktop {
 		display: none;
 	}
 	.information .mobile {
 		display: block;
 	}
 	.information-container .right {
+		flex-shrink: 1;
 		padding: 1rem;
-		border: 0;
 	}
 	.information {
 		flex-direction: column;
@@ -232,87 +261,113 @@ button:hover {
 		margin: 0;
 	}
 	.information:last-child {
-	background-color: white;
+		background-color: white;
 	}
 	.information img {
 		width: 100%;
 	}
 }
 
-/***** COURSES *****/
+
+/***** courses *****/
 
 .courses-container {
     background-color: rgb(240,240,240);
+	border-bottom: 1px solid  rgb(220,220,220);
+	padding: 2rem 0;
 }
 .desktop.courses {
 	display: flex;
 	flex-direction: column;
-	padding-bottom: 1rem;
 }
 .desktop.courses .row {
 	display: flex;
 	justify-content: center;
+	margin-bottom: 1rem;
+}
+.desktop.courses .row:last-child {
+	margin-bottom: 0;
 }
 .mobile.courses {
 	display: none;
 }
 .course {
 	background-color: white;
-	width: 20rem;
-	margin: 0 1rem 1rem 1rem;
+	width: 18rem;
+	height: 18rem;
+	margin: 0 1rem;
 }
-.course img {
-	width: 100%;
-}
-.course-description {
+.course .description {
 	padding: 1rem 1rem 1.5rem 1rem;
 }
+h4 {
+	margin-bottom: 0.5rem;
+}
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 768px) {
+	.courses-container {
+    	background-color: white;
+    	padding: 2rem 0;
+	}
+	.courses-container h2 {
+		margin: 0 0 1rem 0;
+	}
 	.desktop.courses {
 		display: none;
 	}
 	.mobile.courses {
-		display: block;
+		display: flex;
 	}
-	.courses-container {
-    	background-color: white;
+	.mobile.courses .row {
+		width: 30rem;
 	}
 	.mobile.courses h3 {
+		width: ;
 		background-color: rgb(240,240,240);
 		padding: 1rem;
-		margin: 0.5rem;
+		margin: 0 0.5rem 0.5rem 0.5rem;
 		cursor: pointer;
 		transition: color 100ms;
 		transition: background-color 300ms;
 	}
 	.mobile.courses h3:hover {
-		background-color: rgb(80,185,253);
 		color: white;
+		background-color: rgb(80,185,253);
+	}
+}
+
+@media only screen and (max-width: 580px) {
+	.mobile.courses {
+		flex-direction: column;
+	}
+	.mobile.courses .row {
+		width: 100%;
 	}
 }
 
 
-/***** THESIS *****/
+/***** thesis exhibit *****/
 
-.thesis-container, .thesis {
+.thesis-container {
+	display: flex;
+	flex-direction: column;
+	border-bottom: 1px solid  rgb(220,220,220);
+	padding: 2rem 0;
+}
+.thesis-content {
 	display: flex;
 }
-.thesis-container {
-	flex-direction: column;
-}
 .thesis-container .left {
-	padding-right: 0;
+	padding: 0;
 }
 .video-container {
-	margin-bottom: 1.5rem;
+	margin: 0 1rem 0 1.5rem;
 }
 video {
 	width: 100%;
 }
-.thesis-container .right {
-	margin-top: 2rem;
-	margin-left: 1rem;
+.video-caption {
+	margin: 1.5rem 1rem 0 1.5rem;
 }
 .exhibit {
     display: flex;
@@ -323,20 +378,30 @@ video {
     background-color: rgb(240,240,240);
 }
 .exhibit img {
+	width: auto;
 	height: 100%;
 }
-.exhibit-description {
+.exhibit .description {
 	padding-left: 1rem;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 768px) {
 	.video-caption, .thesis-container .right {
 		display: none;
+	}
+	.thesis-container {
+		padding-bottom: 1.5rem;
+	}
+	.thesis-container .left {
+		width: 100%;
+	}
+	.video-container {
+		margin: 0;
 	}
 }
 
 
-/***** FOOTER *****/
+/***** footer *****/
 
 footer {
 	display: flex;
@@ -347,7 +412,10 @@ footer a {
 	margin-right: 1rem;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 480px) {
+	footer p {
+		font-size: 0.9rem;
+	}
 	.legal {
 		display: none;
 	}
