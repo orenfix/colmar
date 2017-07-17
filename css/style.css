@@ -24,12 +24,6 @@ a {
 a:hover {
 	color: rgb(80,185,253);
 }
-.hover:hover {
-	display: inline-block;
-}
-.link:hover {
-	display: none;
-}
 h1 {
 	font-size: 2.5rem;
 	font-weight: 800;
