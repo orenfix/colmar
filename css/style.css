@@ -24,17 +24,11 @@ a {
 a:hover {
 	color: rgb(80,185,253);
 }
-.logo img:hover {
-	content: url('../assets/images/ic-logo-blue.svg');
+.hover:hover {
+	display: inline-block;
 }
-.campus:hover {
-	content: url('../assets/images/ic-on-campus-blue.svg');
-}
-.online:hover {
-	content: url('../assets/images/ic-online-blue.svg');
-}
-.login:hover {
-	content: url('../assets/images/ic-login-blue.svg');
+.link:hover {
+	display: none;
 }
 h1 {
 	font-size: 2.5rem;
