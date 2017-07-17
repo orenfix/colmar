@@ -13,7 +13,7 @@ main {
 	border: 1px solid  rgb(220,220,220);
 }
 a {
-	display: inline-block;
+	display: block;
 	text-decoration: none;
 	color: rgb(90,90,90);
 }
@@ -169,6 +169,7 @@ button:hover {
 		overflow: hidden;
 		width: 100%;
 		height: 11.25rem;
+		padding: 0;
 	}
 }
 
@@ -409,6 +410,7 @@ footer {
 	margin: 1rem 0 1rem 1.5rem;
 }
 footer a {
+	display: inline-block;
 	margin-right: 1rem;
 }
 
