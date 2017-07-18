@@ -285,6 +285,10 @@ nav img {
 	}
 	.information .img-container {
 		width: 100%;
+		height: auto;
+	}
+	.information .description {
+		width: auto;
 	}
 }
 
