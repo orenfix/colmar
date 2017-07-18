@@ -47,6 +47,7 @@ button {
 .img-container, .video-container {
 	width: 100%;
 	height: auto;
+	min-height: 1px;
 }
 img {
 	width: 100%;
