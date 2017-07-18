@@ -46,6 +46,8 @@ button {
 }
 .img-container, .video-container {
 	width: 100%;
+	height: auto;
+	overflow: hidden;
 }
 img {
 	width: 100%;
