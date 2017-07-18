@@ -47,7 +47,6 @@ button {
 .img-container, .video-container {
 	width: 100%;
 	height: auto;
-	overflow: hidden;
 }
 img {
 	width: 100%;
@@ -210,7 +209,6 @@ nav img {
 }
 .information-container .right {
 	border-left: 1px solid rgb(240,240,240);
-	justify-content: flex-start;
 }
 .citation {
 	font-size: .9rem;
@@ -222,6 +220,7 @@ nav img {
 .information {
 	display: flex;
 	padding: 1rem;
+	min-height: 1px;
 }
 .information .img-container  {
 	width: 35%;
@@ -249,7 +248,6 @@ nav img {
 @media only screen and (max-width: 768px) {
 	.information-container .left {
 		display: none;
-		overflow: hidden;
 	}
 	.information-container .right {
 		width: 100%;
@@ -382,6 +380,7 @@ h4 {
 }
 .thesis-content {
 	display: flex;
+	min-height: 1px;
 }
 .thesis-container .left {
 	padding: 0 1rem 0 1.5rem;
@@ -394,7 +393,6 @@ h4 {
 }
 .exhibit {
     display: flex;
-    flex-shrink: 0;
     height: 8.5rem;
     padding: 1rem;
 }
@@ -417,7 +415,6 @@ h4 {
 @media only screen and (max-width: 768px) {
 	.video-caption, .thesis-container .right {
 		display: none;
-		overflow: hidden;
 	}
 	.thesis-container {
 		padding-bottom: 1.5rem;
@@ -425,7 +422,6 @@ h4 {
 	.thesis-container .left {
 		width: 100%;
 		padding: 0;
-		overflow: hidden;
 	}
 }
 
