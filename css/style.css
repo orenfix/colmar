@@ -40,8 +40,20 @@ h3 {
 h4, p {
 	font-weight: 300;
 }
+button {
+    border: 0;
+    cursor: pointer;
+}
+.img-container, .video-container {
+	width: 100%;
+}
 img {
 	width: 100%;
+	height: auto;
+}
+video {
+	width: 100%;
+	height: auto;
 }
 .left {
 	display: flex;
@@ -146,7 +158,7 @@ nav img {
 	font-size: 1.5rem;
 	font-weight: 500;
 }
-button {
+.banner button {
 	width: 20rem;
     font-size: 1rem;
     color: white;
@@ -157,7 +169,7 @@ button {
     cursor: pointer;
     transition: background-color 300ms;
 }
-button:hover, button:active {
+.banner button:hover, .banner button:active {
 	background-color: rgb(80,185,253)
 }
 
@@ -172,13 +184,13 @@ button:hover, button:active {
 		height: 11.25rem;
 		padding: 0;
 	}
-	button {
+	.banner button {
 		padding: 1rem;
 	}
 }
 
 @media only screen and (max-width: 480px) {
-	button {
+	.banner button {
 		padding: 1rem;
 		width: 100%;
 	}
@@ -209,7 +221,7 @@ button:hover, button:active {
 	display: flex;
 	padding: 1rem;
 }
-.information img  {
+.information .img-container  {
 	width: 35%;
 	height: 100%;
 }
@@ -221,6 +233,7 @@ button:hover, button:active {
 	background-color: rgb(240,240,240);
 }
 .information .description {
+	width: 65%;
 	padding: 1rem;
 }
 .information a {
@@ -242,7 +255,7 @@ button:hover, button:active {
 	.information:first-child {
 		margin-top: 1rem;
 	}
-	.information img {
+	.information .img-container {
 		width: 130px;
 	}
 }
@@ -268,7 +281,7 @@ button:hover, button:active {
 	.information:last-child {
 		background-color: white;
 	}
-	.information img {
+	.information .img-container {
 		width: 100%;
 	}
 }
@@ -322,19 +335,25 @@ h4 {
 	}
 	.mobile.courses {
 		display: flex;
+		width: 100%;
+		text-align: center;
 	}
 	.mobile.courses .row {
-		width: 30rem;
+		width: 100%;
 	}
-	.mobile.courses h3 {
+	.mobile.courses button {
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: rgb(90,90,90);
 		background-color: rgb(240,240,240);
+		width: 97%;
+		text-align: left;
 		padding: 1rem;
-		margin: 0 0.5rem 0.5rem 0.5rem;
-		cursor: pointer;
+		margin-bottom: 0.5rem;
 		transition: color 100ms;
 		transition: background-color 300ms;
 	}
-	.mobile.courses h3:hover, .mobile.courses h3:active {
+	.mobile.courses button:hover, .mobile.courses button:active {
 		color: white;
 		background-color: rgb(80,185,253);
 	}
@@ -362,12 +381,9 @@ h4 {
 	display: flex;
 }
 .thesis-container .left {
-	padding: 0;
+	padding: 0 1rem 0 1.5rem;
 }
 .video-container {
-	margin: 0 1rem 0 1.5rem;
-}
-video {
 	width: 100%;
 }
 .video-caption {
@@ -375,17 +391,23 @@ video {
 }
 .exhibit {
     display: flex;
+    flex-shrink: 0;
     height: 8.5rem;
     padding: 1rem;
 }
 .exhibit:first-child {
     background-color: rgb(240,240,240);
 }
+.exhibit .img-container {
+	width: 8.5rem;
+	height: 8.5rem;
+}
 .exhibit img {
-	width: auto;
+	width: 100%;
 	height: 100%;
 }
 .exhibit .description {
+	width: 239px;
 	padding-left: 1rem;
 }
 
@@ -398,9 +420,7 @@ video {
 	}
 	.thesis-container .left {
 		width: 100%;
-	}
-	.video-container {
-		margin: 0;
+		padding: 0;
 	}
 }
 
