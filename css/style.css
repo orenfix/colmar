@@ -67,7 +67,6 @@ video {
 	display: flex;
 	flex-direction: column;
 	width: 423px;
-	flex-shrink: 0;
 }
 
 @media only screen and (max-width: 480px) {
