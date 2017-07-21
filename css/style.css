@@ -13,7 +13,7 @@ main {
 	border: 1px solid  rgb(220,220,220);
 }
 a {
-	display: block;
+	display: inline-block;
 	font-weight: 300;
 	text-decoration: none;
 	color: rgb(90,90,90);
@@ -47,13 +47,9 @@ button {
 .img-container, .video-container {
 	width: 100%;
 	height: auto;
-	min-height: 1px;
+	min-height: 1px; /* workaround for IE11 bug */
 }
-img {
-	width: 100%;
-	height: auto;
-}
-video {
+img, video {
 	width: 100%;
 	height: auto;
 }
@@ -113,6 +109,9 @@ header li {
 	display: inline-block;
 	margin-right: 1rem;
 }
+nav a {
+	display: block;
+}
 nav img {
 	display: none;
 }
@@ -134,7 +133,7 @@ nav img {
 		display: block;
 		height: 27px;
 	}
-	header p, header .desktop {
+	header p, .companies {
 		display: none;
 	}
 	header ul {
@@ -166,8 +165,6 @@ nav img {
     background-color: rgb(90,90,90);
     padding: 0.5rem;
     margin-top: 1.5rem;
-    border: 0;
-    cursor: pointer;
     transition: background-color 300ms;
 }
 .banner button:hover, .banner button:active {
@@ -202,7 +199,7 @@ nav img {
 
 .information-container {
 	display: flex;
-	border-bottom: 1px solid  rgb(220,220,220);
+	border-bottom: 1px solid rgb(220,220,220);
 }
 .information-container h2 {
 	text-align: left;
@@ -210,6 +207,7 @@ nav img {
 }
 .information-container .right {
 	border-left: 1px solid rgb(240,240,240);
+	flex-shrink: 0;
 }
 .citation {
 	font-size: .9rem;
@@ -221,11 +219,11 @@ nav img {
 .information {
 	display: flex;
 	padding: 1rem;
-	min-height: 1px;
+	min-height: 1px; /* workaround for IE11 bug */
 }
 .information .img-container  {
-	width: 35%;
-	height: 100%;
+	flex-basis: 35%;
+	height: auto;
 }
 .information:first-child {
 	padding-top: 0;
@@ -235,7 +233,7 @@ nav img {
 	background-color: rgb(240,240,240);
 }
 .information .description {
-	width: 65%;
+	flex-basis: 65%;
 	padding: 1rem;
 }
 .information a {
@@ -253,12 +251,10 @@ nav img {
 	.information-container .right {
 		width: 100%;
 		border: 0;
+		flex-shrink: 1;
 	}
 	.information:first-child {
 		margin-top: 1rem;
-	}
-	.information .img-container {
-		width: 130px;
 	}
 }
 
@@ -270,7 +266,6 @@ nav img {
 		display: block;
 	}
 	.information-container .right {
-		flex-shrink: 1;
 		padding: 1rem;
 	}
 	.information {
@@ -300,6 +295,9 @@ nav img {
 	border-bottom: 1px solid  rgb(220,220,220);
 	padding: 2rem 0;
 }
+.mobile.courses {
+	display: none;
+}
 .desktop.courses {
 	display: flex;
 	flex-direction: column;
@@ -311,9 +309,6 @@ nav img {
 }
 .desktop.courses .row:last-child {
 	margin-bottom: 0;
-}
-.mobile.courses {
-	display: none;
 }
 .course {
 	background-color: white;
@@ -365,7 +360,7 @@ h4 {
 	}
 }
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 640px) {
 	.mobile.courses {
 		flex-direction: column;
 	}
@@ -385,7 +380,7 @@ h4 {
 }
 .thesis-content {
 	display: flex;
-	min-height: 1px;
+	min-height: 1px; /* workaround for IE11 bug */
 }
 .thesis-container .left {
 	padding: 0 1rem 0 1.5rem;
