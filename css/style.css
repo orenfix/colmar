@@ -281,9 +281,10 @@ nav img {
 	.information .img-container {
 		width: 100%;
 		height: auto;
+		flex-basis: auto;
 	}
 	.information .description {
-		width: auto;
+		flex-basis: auto;
 	}
 }
 
