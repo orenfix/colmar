@@ -66,14 +66,10 @@ i {
 	margin-right: .7rem;
 }
 .left {
-	display: flex;
-	flex-direction: column;
 	width: 60%;
 	padding: 2rem 1.5rem;
 }
 .right {
-	display: flex;
-	flex-direction: column;
 	flex-shrink: 0;
 	width: 423px;
 }
