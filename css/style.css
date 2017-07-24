@@ -44,15 +44,6 @@ button {
     border: 0;
     cursor: pointer;
 }
-.img-container, .video-container {
-	width: 100%;
-	height: auto;
-	min-height: 1px; /* workaround for IE11 bug */
-}
-img, video {
-	width: 100%;
-	height: auto;
-}
 .left {
 	display: flex;
 	flex-direction: column;
@@ -83,6 +74,9 @@ header {
 	padding-left: 1.5rem;
 	height: 4rem;
 }
+header img {
+	width: 100%;
+}
 .logo {
 	display: flex;
 	justify-content: center;
@@ -110,9 +104,6 @@ header li {
 	display: inline-block;
 	margin-right: 1rem;
 }
-nav a {
-	display: block;
-}
 nav img {
 	display: none;
 }
@@ -129,6 +120,9 @@ nav img {
 	}
 	nav {
 		width: 75%;
+	}
+	nav a {
+		display: block;
 	}
 	nav img {
 		display: block;
@@ -171,16 +165,25 @@ nav img {
 .banner button:hover, .banner button:active {
 	background-color: rgb(80,185,253)
 }
+.banner .img-container {
+	background: url("../assets/images/banner.jpg") no-repeat;
+	background-size: contain;
+	padding-top: 73.9%;
+	height: 0;
+}
 
 @media only screen and (max-width: 768px) {
 	.banner {
 		flex-direction: column;
 		padding: 0;
 	}
-	.banner .left {
-		overflow: hidden;
-		width: 100%;
+	.banner .img-container {
 		height: 11.25rem;
+		background-size: cover;
+		padding: 0;
+	} 
+	.banner .left {
+		width: 100%;
 		padding: 0;
 	}
 	.banner button {
@@ -200,7 +203,13 @@ nav img {
 
 .information-container {
 	display: flex;
-	border-bottom: 1px solid rgb(220,220,220);
+	border-bottom: 1px solid  rgb(220,220,220);
+}
+.information-container .left .img-container {
+	background: url("../assets/images/information-main.jpg") no-repeat;
+	background-size: contain;
+	height: 0;
+	padding-top: 54.89%;
 }
 .information-container h2 {
 	text-align: left;
@@ -213,17 +222,25 @@ nav img {
 	font-size: .9rem;
 	padding-top: 2rem;
 }
-.information .mobile {
-	display: none;
-}
 .information {
 	display: flex;
 	padding: 1rem;
 	min-height: 1px; /* workaround for IE11 bug */
 }
+.orientation.img-container {
+	background: url("../assets/images/information-orientation.jpg") no-repeat;
+}
+.campus.img-container {
+	background: url("../assets/images/information-campus.jpg") no-repeat;
+}
+.guest-lecture.img-container {
+	background: url("../assets/images/information-guest-lecture.jpg") no-repeat;
+}
 .information .img-container  {
+	background-size: contain;
 	flex-basis: 35%;
-	height: auto;
+	height: 0;
+	padding-top: 32.14%;
 }
 .information:first-child {
 	padding-top: 0;
@@ -259,12 +276,6 @@ nav img {
 }
 
 @media only screen and (max-width: 480px) {
-	.information .desktop {
-		display: none;
-	}
-	.information .mobile {
-		display: block;
-	}
 	.information-container .right {
 		padding: 1rem;
 	}
@@ -278,9 +289,20 @@ nav img {
 	.information:last-child {
 		background-color: white;
 	}
+	.orientation.img-container {
+		background: url("../assets/images/information-orientation-mobile.jpg") no-repeat;
+	}
+	.campus.img-container {
+		background: url("../assets/images/information-campus-mobile.jpg") no-repeat;
+	}
+	.guest-lecture.img-container {
+		background: url("../assets/images/information-guest-lecture-mobile.jpg") no-repeat;
+	}
 	.information .img-container {
+		background-size: contain;
 		width: 100%;
-		height: auto;
+		height: 0;
+		padding-top: 47.22%;
 		flex-basis: auto;
 	}
 	.information .description {
@@ -316,6 +338,29 @@ nav img {
 	width: 18rem;
 	height: 18rem;
 	margin: 0 1rem;
+}
+.software .img-container {
+	background: url("../assets/images/course-software.jpg") no-repeat;
+}
+.computer-art .img-container {
+	background: url("../assets/images/course-computer-art.jpg") no-repeat;
+}
+.design .img-container {
+	background: url("../assets/images/course-design.jpg") no-repeat;
+}
+.data .img-container {
+	background: url("../assets/images/course-data.jpg") no-repeat;
+}
+.business .img-container {
+	background: url("../assets/images/course-business.jpg") no-repeat;
+}
+.marketing .img-container {
+	background: url("../assets/images/course-marketing.jpg") no-repeat;
+}
+.course .img-container {
+	height: 0;
+	padding-top: 51.13%;
+	background-size: contain;
 }
 .course .description {
 	padding: 1rem 1rem 1.5rem 1rem;
@@ -376,7 +421,7 @@ h4 {
 .thesis-container {
 	display: flex;
 	flex-direction: column;
-	border-bottom: 1px solid  rgb(220,220,220);
+	border-bottom: 1px solid rgb(220,220,220);
 	padding: 2rem 0;
 }
 .thesis-content {
@@ -387,7 +432,11 @@ h4 {
 	padding: 0 1rem 0 1.5rem;
 }
 .video-container {
+	min-height: 1px; /* workaround for IE11 bug */
+}
+video {
 	width: 100%;
+	height: auto;
 }
 .video-caption {
 	margin: 1.5rem 1rem 0 1.5rem;
@@ -400,13 +449,16 @@ h4 {
 .exhibit:first-child {
     background-color: rgb(240,240,240);
 }
+.fisma .img-container {
+	background: url("../assets/images/thesis-fisma.jpg") no-repeat;
+}
+.now-and-then .img-container {
+	background: url("../assets/images/thesis-now-and-then.jpg") no-repeat;
+}
 .exhibit .img-container {
 	width: 8.5rem;
 	height: 8.5rem;
-}
-.exhibit img {
-	width: 100%;
-	height: 100%;
+	background-size: contain;
 }
 .exhibit .description {
 	width: 239px;
