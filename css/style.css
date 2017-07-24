@@ -41,8 +41,29 @@ h4, p {
 	font-weight: 300;
 }
 button {
-    border: 0;
+	display: flex;
+	align-items: center;
     cursor: pointer;
+    color: white;
+    background-color: rgba(80,185,253,.7);
+    border: 2px solid transparent;
+    border-radius: 4px;
+    transition: color 300ms, background-color 300ms, border 300ms;
+}
+button:hover , .button:focus {
+	background-color: rgba(80,185,253,1);
+	border-color: rgb(80,185,253);
+}
+button:active {
+	color: rgb(80,185,253);
+	background-color: rgba(80,185,253,.3);
+	border-color: rgb(80,185,253);
+}
+button:focus {
+	outline: none;
+}
+i {
+	margin-right: .7rem;
 }
 .left {
 	display: flex;
@@ -85,12 +106,15 @@ header img {
 	display: block;
 	height: 40px;
 }
+.logo img:hover , .logo img:active {
+	content: url("../assets/images/ic-logo-blue.svg");
+}
 .logo a {
 	display: flex;
 	align-items: center;
 }
 .logo a:hover, .logo a:active {
-	color: rgb(90,90,90);
+	color: rgb(80,185,253);
 }
 .logo p {
 	font-size: 1.5rem;
@@ -98,7 +122,7 @@ header img {
 }
 .logo span {
 	font-weight: 300;
-	color: rgb(200,200,200);
+	opacity: .7;
 }
 header li {
 	display: inline-block;
@@ -128,6 +152,15 @@ nav img {
 		display: block;
 		height: 27px;
 	}
+	.on-campus:hover, .on-campus:active {
+		content: url("../assets/images/ic-on-campus-blue.svg");
+	}
+	.online:hover, .online:active {
+		content: url("../assets/images/ic-online-blue.svg");
+	}
+	.sign-in:hover, .sign-in:active {
+		content: url("../assets/images/ic-login-blue.svg");
+	}
 	header p, .companies {
 		display: none;
 	}
@@ -143,7 +176,8 @@ nav img {
 .banner {
 	display: flex;
 	align-items: center;
-	background-color: rgb(240,240,240);
+	background-color: rgb(240,240,240); /*old color*/
+	background-color: rgba(80,185,253,.1);
 	border-bottom: 1px solid  rgb(220,220,220);
 }
 .banner .content {
@@ -156,14 +190,9 @@ nav img {
 .banner button {
 	width: 20rem;
     font-size: 1rem;
-    color: white;
-    background-color: rgb(90,90,90);
     padding: 0.5rem;
     margin-top: 1.5rem;
-    transition: background-color 300ms;
-}
-.banner button:hover, .banner button:active {
-	background-color: rgb(80,185,253)
+    justify-content: center;
 }
 .banner .img-container {
 	background: url("../assets/images/banner.jpg") no-repeat;
@@ -247,18 +276,19 @@ nav img {
 	margin-top: 2rem;
 }
 .information:last-child {
-	background-color: rgb(240,240,240);
+	background-color: rgb(240,240,240); /*old color*/
+	background-color: rgba(80,185,253,.1);
 }
 .information .description {
 	flex-basis: 65%;
 	padding: 1rem;
 }
 .information a {
-	color: rgb(80,185,253);
+	color: rgba(80,185,253,.7);
 	margin-top: 0.5rem;
 }
 .information a:hover, .information a:active {
-	font-weight: 500;
+	color: rgba(80,185,253,1);
 }
 
 @media only screen and (max-width: 768px) {
@@ -314,7 +344,8 @@ nav img {
 /***** courses *****/
 
 .courses-container {
-    background-color: rgb(240,240,240);
+	background-color: rgb(240,240,240); /*old color*/
+	background-color: rgba(80,185,253,.1);
 	border-bottom: 1px solid  rgb(220,220,220);
 	padding: 2rem 0;
 }
@@ -382,27 +413,20 @@ h4 {
 	}
 	.mobile.courses {
 		display: flex;
-		width: 100%;
-		text-align: center;
 	}
 	.mobile.courses .row {
 		width: 100%;
+		margin: 0 .25rem;
 	}
 	.mobile.courses button {
 		font-size: 1.5rem;
 		font-weight: 700;
-		color: rgb(90,90,90);
-		background-color: rgb(240,240,240);
-		width: 97%;
-		text-align: left;
+		width: 100%;
 		padding: 1rem;
 		margin-bottom: 0.5rem;
-		transition: color 100ms;
-		transition: background-color 300ms;
 	}
-	.mobile.courses button:hover, .mobile.courses button:active {
-		color: white;
-		background-color: rgb(80,185,253);
+	.mobile.courses i {
+		font-size: 1rem;
 	}
 }
 
@@ -411,7 +435,7 @@ h4 {
 		flex-direction: column;
 	}
 	.mobile.courses .row {
-		width: 100%;
+		width: auto;
 	}
 }
 
@@ -447,7 +471,8 @@ video {
     padding: 1rem;
 }
 .exhibit:first-child {
-    background-color: rgb(240,240,240);
+	background-color: rgb(240,240,240); /*old color*/
+	background-color: rgba(80,185,253,.1);
 }
 .fisma .img-container {
 	background: url("../assets/images/thesis-fisma.jpg") no-repeat;
