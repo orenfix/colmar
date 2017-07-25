@@ -106,9 +106,6 @@ header img {
 	width: 27px;
 	height: 40px;
 }
-.logo img:hover , .logo img:active {
-	content: url("../assets/images/ic-logo-blue.svg");
-}
 .logo a {
 	display: flex;
 	align-items: center;
@@ -152,15 +149,6 @@ nav img {
 	nav img {
 		display: block;
 		height: 27px;
-	}
-	.on-campus:hover, .on-campus:active {
-		content: url("../assets/images/ic-on-campus-blue.svg");
-	}
-	.online:hover, .online:active {
-		content: url("../assets/images/ic-online-blue.svg");
-	}
-	.sign-in:hover, .sign-in:active {
-		content: url("../assets/images/ic-login-blue.svg");
 	}
 	header p, .companies {
 		display: none;
