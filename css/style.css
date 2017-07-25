@@ -12,6 +12,7 @@ html {
 }
 main {
 	border: 1px solid  rgb(220,220,220);
+	display: block;
 }
 a {
 	display: inline-block;
@@ -102,6 +103,7 @@ header img {
 }
 .logo img {
 	display: block;
+	width: 27px;
 	height: 40px;
 }
 .logo img:hover , .logo img:active {
