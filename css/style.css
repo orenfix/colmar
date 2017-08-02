@@ -266,6 +266,7 @@ nav img {
 	background-size: contain;
 	width: 148.05px;
 	height: 148.05px;
+	flex-shrink: 0;
 }
 .information:first-child {
 	padding-top: 0;
@@ -297,6 +298,9 @@ nav img {
 	}
 	.information:first-child {
 		margin-top: 1rem;
+	}
+	.information .description {
+		width: auto;
 	}
 }
 
